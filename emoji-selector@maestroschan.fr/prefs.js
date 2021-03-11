@@ -32,11 +32,11 @@ const EmojiSelectorSettingsWidget = new GObject.Class({
 		builder.add_from_file(Me.path+'/prefs.ui');
 		this.prefs_stack = builder.get_object('prefs_stack');
 
-		this.switcher = new Gtk.StackSwitcher({
-			halign: Gtk.Align.CENTER,
-			visible: true,
-			stack: this.prefs_stack
-		});
+		// this.switcher = new Gtk.StackSwitcher({
+		// 	halign: Gtk.Align.CENTER,
+		// 	visible: true,
+		// 	stack: this.prefs_stack
+		// });
 
 		this._loadPrefsPage(builder);
 		this._loadAboutPage(builder);
@@ -51,11 +51,11 @@ const EmojiSelectorSettingsWidget = new GObject.Class({
 		positionCombobox.append('top', _("From top to bottom"));
 		positionCombobox.append('bottom', _("From bottom to top"));
 		positionCombobox.active_id = SETTINGS.get_string('position');
-		positionCombobox.set_tooltip_text(
-			_("Displaying the interface from the bottom is better if you use " +
-			                   "a bottom panel instead of the default top bar.")
-			+ '\n' + RELOAD_TEXT
-		);
+		// positionCombobox.set_tooltip_text(
+		// 	_("Displaying the interface from the bottom is better if you use " +
+		// 	                   "a bottom panel instead of the default top bar.")
+		// 	+ '\n' + RELOAD_TEXT
+		// );
 
 		positionCombobox.connect("changed", (widget) => {
 			SETTINGS.set_string('position', widget.get_active_id());
@@ -69,7 +69,7 @@ const EmojiSelectorSettingsWidget = new GObject.Class({
 
 		let emojiSize = builder.get_object('size_spinbtn');
 		emojiSize.set_value(SETTINGS.get_int('emojisize'));
-		
+
 		emojiSize.connect('value-changed', w => {
 			var value = w.get_value_as_int();
 			SETTINGS.set_int('emojisize', value);
@@ -83,7 +83,6 @@ const EmojiSelectorSettingsWidget = new GObject.Class({
 
 		let nbColsSpinBtn = builder.get_object('nbcols_spinbtn');
 		nbColsSpinBtn.set_value(SETTINGS.get_int('nbcols'));
-		
 		nbColsSpinBtn.connect('value-changed', w => {
 			var value = w.get_value_as_int();
 			SETTINGS.set_int('nbcols', value);
@@ -183,16 +182,15 @@ const EmojiSelectorSettingsWidget = new GObject.Class({
 function buildPrefsWidget() {
 	let widget = new EmojiSelectorSettingsWidget();
 
-	Mainloop.timeout_add(0, () => {
-		let headerBar = widget.prefs_stack.get_toplevel().get_titlebar();
-		headerBar.custom_title = widget.switcher;
+	// Mainloop.timeout_add(0, () => {
+	// 	let headerBar = widget.prefs_stack.get_toplevel().get_titlebar();
+	// 	headerBar.custom_title = widget.switcher;
 
-		return false;
-	});
+	// 	return false;
+	// });
 
-	widget.prefs_stack.show_all();
+	// widget.prefs_stack.show_all();
 	return widget.prefs_stack;
 }
 
 //------------------------------------------------------------------------------
-
