@@ -117,7 +117,7 @@
                                         <property name="can-focus">True</property>
                                         <property name="halign">end</property>
                                         <property name="valign">start</property>
-                                        <property name="hexpand">False</property>
+                                        <property name="hexpand">True</property>
                                         <property name="vexpand">False</property>
                                       </object>
 
@@ -160,7 +160,7 @@
                                       <object class="GtkComboBoxText" id="position_combobox">
                                         <property name="can-focus">False</property>
                                         <property name="halign">end</property>
-                                        <property name="hexpand">False</property>
+                                        <property name="hexpand">True</property>
                                         <property name="vexpand">False</property>
                                       </object>
 
@@ -203,7 +203,7 @@
                                     <child>
                                       <object class="GtkSpinButton" id="nbcols_spinbtn">
                                         <property name="can-focus">True</property>
-                                        <property name="hexpand">False</property>
+                                        <property name="hexpand">True</property>
                                         <property name="vexpand">False</property>
                                         <property name="text" translatable="yes">12</property>
                                         <property name="adjustment">adjustment_nbcols</property>
@@ -232,6 +232,7 @@
                                 <property name="margin-top">12</property>
                                 <property name="margin-bottom">12</property>
                                 <property name="orientation">vertical</property>
+                                <property name="hexpand">True</property>
                                 <child>
                                   <object class="GtkBox" id="size_emoji_box2">
                                     <property name="visible">True</property>
@@ -250,7 +251,7 @@
                                     <child>
                                       <object class="GtkSpinButton" id="size_spinbtn">
                                         <property name="can-focus">True</property>
-                                        <property name="hexpand">False</property>
+                                        <property name="hexpand">True</property>
                                         <property name="vexpand">False</property>
                                         <property name="text" translatable="yes">30</property>
                                         <property name="adjustment">adjustment_size</property>
@@ -332,7 +333,7 @@
                                       <object class="GtkSwitch" id="keybinding_switch">
                                         <property name="can-focus">True</property>
                                         <property name="halign">start</property>
-                                        <property name="hexpand">False</property>
+                                        <property name="hexpand">True</property>
                                         <property name="vexpand">False</property>
                                         <property name="halign">end</property>
                                       </object>
@@ -416,7 +417,7 @@
                                         <property name="can-focus">True</property>
                                         <property name="receives-default">False</property>
                                         <property name="halign">start</property>
-                                        <property name="hexpand">False</property>
+                                        <property name="hexpand">True</property>
                                         <property name="vexpand">False</property>
                                       </object>
 
