@@ -279,7 +279,7 @@
                       <object class="GtkLabel">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="label" translatable="yes">Layout</property>
+                        <property name="label" translatable="yes">Keyboard bindings</property>
                         <attributes>
                           <attribute name="weight" value="bold" />
                         </attributes>
@@ -473,7 +473,7 @@
                     </child>
                     <child>
                       <object class="GtkBox">
-                        <property name="spacing">16</property>
+                        <!-- <property name="spacing">16</property> -->
                         <property name="homogeneous">true</property>
                         <property name="orientation">vertical</property>
                         <child>
@@ -481,7 +481,7 @@
                             <property name="orientation">vertical</property>
                             <child>
                               <object class="GtkLabel">
-                                <property name="label" translatable="yes">Author:</property>
+                                <property name="label" translatable="yes">Author</property>
                                 <attributes>
                                   <attribute name="weight" value="bold" />
                                 </attributes>
@@ -499,7 +499,7 @@
                             <property name="orientation">vertical</property>
                             <child>
                               <object class="GtkLabel" id="translators-label">
-                                <property name="label" translatable="yes">Translator(s):</property>
+                                <property name="label" translatable="yes">Translator(s)</property>
                                 <attributes>
                                   <attribute name="weight" value="bold" />
                                 </attributes>
@@ -517,7 +517,7 @@
                             <property name="orientation">vertical</property>
                             <child>
                               <object class="GtkLabel">
-                                <property name="label" translatable="yes">Contributors:</property>
+                                <property name="label" translatable="yes">Contributors</property>
                                 <attributes>
                                   <attribute name="weight" value="bold" />
                                 </attributes>
@@ -525,7 +525,10 @@
                             </child>
                             <child>
                               <object class="GtkLabel">
-                                <property name="label">Jimmy Scionti Ryan Gonzalez xurizaemon</property>
+                                <property name="label">Jimmy Scionti
+Ryan Gonzalez
+xurizaemon
+Fran Diéguez</property>
                               </object>
                             </child>
                           </object>
