@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoji'selector\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-12 01:43+0100\n"
-"PO-Revision-Date: 2021-03-12 01:43+0100\n"
+"POT-Creation-Date: 2021-03-12 03:15+0100\n"
+"PO-Revision-Date: 2021-03-12 03:15+0100\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -91,16 +91,14 @@ msgid "Layout"
 msgstr "Disposición"
 
 #: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Always show the icon"
-msgstr "Mostrar sempre a icona"
-
-#: emoji-selector@maestroschan.fr/prefs.ui
 msgid ""
-"If you access the menu with the keyboard shortcut, you don't need to always "
-"display the icon."
+"Displaying the interface from the bottom is better if you use a bottom panel "
+"instead of the default top bar. Modifications will be effective after "
+"reloading the extension."
 msgstr ""
-"Se accede ao menú cos atallos de teclado, pode que non queira que se mostre "
-"sempre a icona."
+"Se cambiou o panel á parte inferior da pantalla seguro que quererá usar a "
+"interface desde arriba cara abaixo. As modificacións realizaranse despois de "
+"recargar a extensión."
 
 #: emoji-selector@maestroschan.fr/prefs.ui
 msgid "General layout"
@@ -125,6 +123,18 @@ msgstr "30"
 #: emoji-selector@maestroschan.fr/prefs.ui
 msgid "Keyboard bindings"
 msgstr "Atallos de teclado"
+
+#: emoji-selector@maestroschan.fr/prefs.ui
+msgid "Always show the icon in the panel"
+msgstr "Mostrar sempre a icona no panel"
+
+#: emoji-selector@maestroschan.fr/prefs.ui
+msgid ""
+"If you access the menu with the keyboard shortcut, you don't need to always "
+"display the icon."
+msgstr ""
+"Se accede ao menú cos atallos de teclado, pode que non queira que se mostre "
+"sempre a icona."
 
 #: emoji-selector@maestroschan.fr/prefs.ui
 msgid "Use a keyboard shortcut to toggle the menu"
