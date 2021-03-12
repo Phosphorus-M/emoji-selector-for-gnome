@@ -32,11 +32,13 @@ const EmojiSelectorSettingsWidget = new GObject.Class({
 		builder.add_from_file(Me.path+'/prefs.ui');
 		this.prefs_stack = builder.get_object('prefs_stack');
 
-		// this.switcher = new Gtk.StackSwitcher({
-		// 	halign: Gtk.Align.CENTER,
-		// 	visible: true,
-		// 	stack: this.prefs_stack
-		// });
+		this.switcher = new Gtk.StackSwitcher({
+			halign: Gtk.Align.CENTER,
+			visible: true,
+			stack: this.prefs_stack
+		});
+		// this.prefs_stack.add_titled(builder.get_object('settings_page'), 'Settings', 'settings_page')
+		// this.prefs_stack.add_titled(builder.get_object('about_page'), 'About', 'about_page')
 
 		this._loadPrefsPage(builder);
 		this._loadAboutPage(builder);
@@ -176,13 +178,20 @@ const EmojiSelectorSettingsWidget = new GObject.Class({
 
 function buildPrefsWidget() {
 	let widget = new EmojiSelectorSettingsWidget();
+	let obj = widget.prefs_stack;
 
-	// Mainloop.timeout_add(0, () => {
-	// 	let headerBar = widget.prefs_stack.get_toplevel().get_titlebar();
-	// 	headerBar.custom_title = widget.switcher;
+	obj.connect('realize', () => {
+		let window = (this._shellVersion < 40) ? obj.get_toplevel() : obj.get_root();
 
-	// 	return false;
-	// });
+		// csd
+		window.set_titlebar(widget.switcher);
+		if (this._shellVersion < 40) {
+			headerBar.set_show_close_button(true);
+		}
+
+		this._registerSignals(window);
+	});
+
 
 	// widget.prefs_stack.show_all();
 	return widget.prefs_stack;
