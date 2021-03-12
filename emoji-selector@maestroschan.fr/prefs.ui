@@ -79,6 +79,7 @@
                                     <property name="visible">True</property>
                                     <property name="can-focus">False</property>
                                     <property name="spacing">32</property>
+                                    <property name="tooltip-text" translatable="yes">Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar. Modifications will be effective after reloading the extension.</property>
                                     <child>
                                       <object class="GtkLabel">
                                         <property name="visible">True</property>
@@ -90,15 +91,14 @@
                                     </child>
                                     <child>
                                       <object class="GtkComboBoxText" id="position_combobox">
+                                        <property name="valign">start</property>
                                         <property name="can-focus">False</property>
                                         <property name="halign">end</property>
                                         <property name="hexpand">True</property>
                                         <property name="vexpand">False</property>
                                       </object>
-
                                     </child>
                                   </object>
-
                                 </child>
                               </object>
                             </child>

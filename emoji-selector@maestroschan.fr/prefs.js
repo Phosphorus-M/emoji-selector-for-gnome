@@ -51,11 +51,6 @@ const EmojiSelectorSettingsWidget = new GObject.Class({
 		positionCombobox.append('top', _("From top to bottom"));
 		positionCombobox.append('bottom', _("From bottom to top"));
 		positionCombobox.active_id = SETTINGS.get_string('position');
-		// positionCombobox.set_tooltip_text(
-		// 	_("Displaying the interface from the bottom is better if you use " +
-		// 	                   "a bottom panel instead of the default top bar.")
-		// 	+ '\n' + RELOAD_TEXT
-		// );
 
 		positionCombobox.connect("changed", (widget) => {
 			SETTINGS.set_string('position', widget.get_active_id());
