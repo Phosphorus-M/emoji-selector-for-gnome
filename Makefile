@@ -15,7 +15,8 @@ build:
 
 install:
 	@echo "Installing extension files in $(EXTENSION_INSTALL_DIR)"
-	cp -r ./$(EXTENSION_UUID) $(EXTENSION_INSTALL_DIR)/
+	mkdir -p $(EXTENSION_INSTALL_DIR)
+	cp -r ./$(EXTENSION_UUID)/* $(EXTENSION_INSTALL_DIR)
 
 zip: build
 	@echo "Creating zip file from extension"
