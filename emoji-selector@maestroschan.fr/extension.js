@@ -106,10 +106,8 @@ class EmojisMenu {
 		// initializing this._buttonMenuItem
 		this._renderPanelMenuHeaderBox();
 
-		this.searchItem = new EmojiSearchItem();
-
 		//initializing the "recently used" buttons
-		let recentlyUsed = this._recentlyUsedInit();
+		this.searchItem = new EmojiSearchItem(nbColumns);
 
 		if (POSITION === 'top') {
 			this.super_btn.menu.addMenuItem(this._buttonMenuItem);
